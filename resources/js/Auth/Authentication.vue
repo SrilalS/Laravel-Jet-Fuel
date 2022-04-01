@@ -128,9 +128,9 @@ export default {
     }),
     methods:{
         Login(){
-            this.loading = true;
             this.$refs.form.validate()
             if(this.valid){
+                this.loading = true;
                 client.post('/api/auth/login', this.form).then(response => {
                     console.log(response.data);
                     this.$store.commit('auth', {
@@ -139,20 +139,27 @@ export default {
                     });
                 }).catch(error => {
                     console.log(error.response);
+                    this.$root.VToast.show({
+                        message: 'Please Try Again!',
+                        icon: 'alert-circle',
+                        color:'error'
+                    })
+                    this.loading = false;
                 }).finally(() => {
                     this.loading = false;
                 });
             }
         },
         Register(){
-            this.loading = true;
             this.$refs.form.validate()
             if(this.valid){
+                this.loading = true;
                 client.post('/api/auth/register', this.form).then(response => {
                     console.log(response.data);
                     this.is_login = true;
                 }).catch(error => {
                     console.log(error.response);
+                    this.loading = false;
                 }).finally(() => {
                     this.loading = false;
                 });

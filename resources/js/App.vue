@@ -13,15 +13,22 @@
       <v-main>
           <router-view/>
       </v-main>
+
+      <VToast ref="VToast"/>
   </v-app>
 </template>
 
 <script>
+import VToast from "./Components/VToast";
 export default {
     name: "App",
+    components: {VToast},
     data:()=>({
         drawer:true,
-    })
+    }),
+    mounted() {
+        this.$root.VToast = this.$refs.VToast
+    },
 }
 </script>
 
