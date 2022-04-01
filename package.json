@@ -1,0 +1,31 @@
+{
+    "private": true,
+    "scripts": {
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "deepmerge": "^4.2.2",
+        "laravel-mix": "^6.0.39",
+        "laravel-mix-bundle-analyzer": "^1.0.5",
+        "lodash": "^4.17.21",
+        "postcss": "^8.4.5",
+        "resolve-url-loader": "^4.0.0",
+        "sass": "~1.32",
+        "sass-loader": "^12.4.0",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.14",
+        "vuetify-loader": "^1.7.3",
+        "vuetifyjs-mix-extension": "^0.0.20"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "vue": "^2.6.14",
+        "vue-router": "^3.5.3",
+        "vuetify": "^2.6.1",
+        "vuex": "^3.6.2"
+    }
+}
