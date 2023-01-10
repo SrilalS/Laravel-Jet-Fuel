@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "deepmerge": "^4.2.2",
-        "laravel-mix": "^6.0.39",
+        "laravel-mix": "^6.0.49",
         "laravel-mix-bundle-analyzer": "^1.0.5",
         "lodash": "^4.17.21",
         "postcss": "^8.4.5",
@@ -17,15 +17,15 @@
         "sass": "~1.32",
         "sass-loader": "^12.4.0",
         "vue-loader": "^15.9.8",
-        "vue-template-compiler": "^2.6.14",
-        "vuetify-loader": "^1.7.3",
+        "vue-template-compiler": "^2.7.14",
+        "vuetify-loader": "^1.9.2",
         "vuetifyjs-mix-extension": "^0.0.20"
     },
     "dependencies": {
-        "axios": "^0.24.0",
-        "vue": "^2.6.14",
+        "axios": "^1.2.2",
+        "vue": "^2.7.14",
         "vue-router": "^3.5.3",
-        "vuetify": "^2.6.1",
+        "vuetify": "^2.6.13",
         "vuex": "^3.6.2"
     }
 }

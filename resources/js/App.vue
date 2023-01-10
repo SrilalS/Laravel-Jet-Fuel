@@ -11,7 +11,7 @@
       </v-app-bar>
 
       <v-main>
-          <router-view/>
+          <router-view v-if="$store.state.AuthChecked"/>
       </v-main>
 
       <VToast ref="VToast"/>

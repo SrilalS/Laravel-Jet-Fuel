@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row no-gutters justify="center">
-        <v-col cols="3">
+        <v-col cols="4">
             <v-card class="rounded-lg mt-16">
                 <v-card-text>
                     <v-row no-gutters>
@@ -15,7 +15,7 @@
                                     outlined
                                     v-model="form.email"
                                     :rules="emailRules"
-                                    label="Email"
+                                    label="Email (admin@jet.fuel)"
                                     type="email"
                                     autofocus
                                     required
@@ -24,7 +24,7 @@
                                     outlined
                                     v-model="form.password"
                                     :rules="passwordRules"
-                                    label="Password"
+                                    label="Password (password)"
                                     type="password"
                                     required
                                 ></v-text-field>

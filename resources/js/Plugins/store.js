@@ -9,7 +9,7 @@ const Store = new Vuex.Store({
     state: {
         Token: null,
         User: null,
-        Loading:false,
+        AuthChecked:true,
     },
     mutations: {
         auth(state, data) {
@@ -19,7 +19,7 @@ const Store = new Vuex.Store({
             window.localStorage.setItem('user', JSON.stringify(data.user));
             authClient.defaults.headers.authorization = 'Bearer '+ data.token;
             router.push('/').then(r => {
-                window.location.reload();
+                state.AuthChecked = true;
             });
         },
         deAuth(state) {
@@ -28,10 +28,11 @@ const Store = new Vuex.Store({
             window.localStorage.clear();
             authClient.defaults.headers.authorization = null;
             router.push('/auth').then(r => {
-                window.location.reload();
+                state.AuthChecked = true;
             });
         },
         authCheck(state) {
+            state.AuthChecked = false;
             let token = localStorage.getItem('token');
             authClient.defaults.headers.authorization = 'Bearer '+ token;
             authClient.post('/api/auth/check').then(response => {
@@ -41,16 +42,14 @@ const Store = new Vuex.Store({
                     window.localStorage.setItem('token', token);
                     window.localStorage.setItem('user', JSON.stringify(response.data.user));
                     authClient.defaults.headers.authorization = 'Bearer '+ token;
-                    //router.push('/').then(r => {
-                        //window.location.reload();
-                    //});
+                    state.AuthChecked = true;
                 } else {
                     window.localStorage.clear();
-                    state.Token = null;
                     state.User = null;
+                    state.Token = null;
                     authClient.defaults.headers.authorization = null;
                     router.push('/auth').then(r => {
-                        //window.location.reload();
+                        state.AuthChecked = true;
                     });
                 }
             }).catch(error => {
@@ -59,7 +58,7 @@ const Store = new Vuex.Store({
                 state.User = null;
                 authClient.defaults.headers.authorization = null;
                 router.push('/auth').then(r => {
-                    //window.location.reload();
+                    state.AuthChecked = true;
                 });
 
             });

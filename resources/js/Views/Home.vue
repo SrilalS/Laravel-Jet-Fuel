@@ -7,11 +7,11 @@
                 </v-card>
                 <span class="text-h2 font-weight-medium">Laravel Jet Fuel</span>
                 <br>
-                <span>Template Version 1.0</span>
+                <span class="text-h5">Template Version 1.2</span>
                 <br>
-                <span>Laravel 9 | VueJs 2 | Vuetify 2</span>
+                <span>Laravel 9.4 | VueJs 2.7 | Vuetify 2.6</span>
                 <br>
-                <span>Author: Srilal Sachintha</span>
+                <span>Template Maintainer: Srilal Sachintha</span>
                 <br>
                 <v-btn target="_blank" href="https://github.com/SrilalS/Laravel-Jet-Fuel" outlined>
                     <v-icon>mdi-github</v-icon>
