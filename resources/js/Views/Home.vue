@@ -5,9 +5,20 @@
                 <v-card height="130" width="130" class="rounded-lg" color="red">
                     <v-icon size="128" color="white">mdi-rocket-launch</v-icon>
                 </v-card>
-                <span class="text-red text-h2 font-weight-medium">Laravel Jet Fuel</span>
+
+                <v-alert class="mt-4">
+                    <v-alert-title>
+                        <span class="text-red text-h2 font-weight-medium">Laravel Jet Fuel</span>
+                    </v-alert-title>
+                </v-alert>
+
+                <v-row no-gutters>
+                    <v-card>
+                        <v-img src="/Assets/laravel.svg')"></v-img>
+                    </v-card>
+                </v-row>
                 <br>
-                <span class="text-h5">Template Version 1.2</span>
+
                 <br>
                 <span>Laravel 9 | Vue 3 | Vuetify 3</span>
                 <br>
