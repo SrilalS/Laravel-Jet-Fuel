@@ -5,16 +5,21 @@
 ![Vue](https://img.shields.io/badge/Vue-3-green)
 ![Vuetify](https://img.shields.io/badge/Vuetify-3-blue)
 ![Pinia](https://img.shields.io/badge/Pinia-3-yellow)
+![VueRouter](https://img.shields.io/badge/VueRouter-4-green)
 
 ## About Jet Fuel
 
 Laravel Jet Fuel is a template made for quick and easy setup for 
 hobby projects and assignments and similar scale projects. 
 It keeps to the bare bones for functions and best suited for skipping 
-the setup part of Laravel and Vue projects.
+the setup part of Laravel and Vue Integrated projects.
 
-For years, I have been using Laravel and Vue for my university projects and
-I have decided to make a template for myself and others to use.
+For years, I have been using Laravel and Vue for my university projects and decided to make a template some years ago to make the setup process shorter.
+I have now opened it to everyone to use, and hopefully it will be useful for you as well.
+
+I Have Kept everything to the bare bones, so it is easy to understand and modify. 
+This also means that it is not a full-fledged template, 
+but rather a starting point for your project.
 
 ## Features
 
