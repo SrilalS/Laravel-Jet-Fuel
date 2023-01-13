@@ -13,6 +13,18 @@ hobby projects and assignments and similar scale projects.
 It keeps to the bare bones for functions and best suited for skipping 
 the setup part of Laravel and Vue projects.
 
+For years, I have been using Laravel and Vue for my university projects and
+I have decided to make a template for myself and others to use.
+
+## Features
+
+-   ✅ Latest Framework Versions
+-   ✅ Support for Vue 3
+-   ✅ Vuetify 3 For Faster UI Development
+-   ✅ JWT Authentication Pre-Setup
+-   ✅ Pinia For State Management
+-   ✅ For Routing, VueRouter Pre-Setup
+-   ✅ Both Vite and Mix Build Options
 
 ## Vite vs Mix
 Vite offers a faster development experience than Mix and is now the default
@@ -22,14 +34,7 @@ build tool for almost every framework that used to use Mix. it also offers
 - The `Main` branch and the `laravel9-vue3-with-vite` is for Vue3 and Vite.
 - The `laravel9-vue2-with-mix` branch is for Vue2 and Mix.
 
-## Features
-
--   Latest Framework Versions
--   JWT Authentication Pre-Setup
--   Vuetify 3 For Faster UI Development
--   Pinia For State Management
--   For Routing, VueRouter Pre-Setup
--   Both Vite and Mix Build Options
+`Note that the Vue 2 version of the template is now in maintenance mode and will not be updated.`
 
 
 ## Installation
