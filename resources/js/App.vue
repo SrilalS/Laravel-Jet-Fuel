@@ -1,17 +1,15 @@
 <template>
   <v-app>
       <v-app-bar app>
-          <v-row justify="start" no-gutters>
-              <h3 class="text-h5 font-weight-bold">
-                  Laravel Jet Fuel
-              </h3>
-          </v-row>
-          <v-btn v-if="$route.path !== '/auth'" @click="$store.commit('deAuth')" text>Sign Out</v-btn>
-
+          <v-app-bar-title>Laravel Jet Fuel</v-app-bar-title>
+          <v-btn border class="text-red" v-if="$route.path !== '/auth'" @click="authStore.deAuthenticate()" text>
+              <v-icon color="red" class="mr-2">mdi-logout</v-icon>
+              Sign Out
+          </v-btn>
       </v-app-bar>
 
       <v-main>
-          <router-view v-if="$store.state.AuthChecked"/>
+          <router-view/>
       </v-main>
 
       <VToast ref="VToast"/>
@@ -19,16 +17,24 @@
 </template>
 
 <script>
-import VToast from "./Components/VToast";
+import {useAuthStore} from "@/Store/authStore";
+import VToast from "./Components/VToast.vue";
+
 export default {
     name: "App",
     components: {VToast},
+    setup() {
+        const authStore = useAuthStore();
+        return {authStore}
+    },
     data:()=>({
         drawer:true,
     }),
     mounted() {
-        this.$root.VToast = this.$refs.VToast
+        this.$root.VToast = this.$refs.VToast;
+        this.authStore.authCheck();
     },
+
 }
 </script>
 

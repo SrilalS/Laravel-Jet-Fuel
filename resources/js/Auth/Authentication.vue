@@ -12,7 +12,7 @@
                             </v-card-title>
                             <v-form v-if="is_login" ref="form" v-model="valid" lazy-validation>
                                 <v-text-field
-                                    outlined
+                                    variant="outlined"
                                     v-model="form.email"
                                     :rules="emailRules"
                                     label="Email (admin@jet.fuel)"
@@ -21,7 +21,7 @@
                                     required
                                 ></v-text-field>
                                 <v-text-field
-                                    outlined
+                                    variant="outlined"
                                     v-model="form.password"
                                     :rules="passwordRules"
                                     label="Password (password)"
@@ -32,6 +32,7 @@
                                     :loading="loading"
                                     color="primary"
                                     dark
+                                    class="mr-2"
                                     @click="Login">
                                     Sign In
                                 </v-btn>
@@ -44,7 +45,7 @@
 
                             <v-form v-if="!is_login" ref="form" v-model="valid" lazy-validation>
                                 <v-text-field
-                                    outlined
+                                    variant="outlined"
                                     v-model="form.name"
                                     :rules="nameRules"
                                     label="Name"
@@ -53,7 +54,7 @@
                                     required
                                 ></v-text-field>
                                 <v-text-field
-                                    outlined
+                                    variant="outlined"
                                     v-model="form.email"
                                     :rules="emailRules"
                                     label="Email"
@@ -62,7 +63,7 @@
                                     required
                                 ></v-text-field>
                                 <v-text-field
-                                    outlined
+                                    variant="outlined"
                                     v-model="form.password"
                                     :rules="passwordRules"
                                     label="Password"
@@ -70,7 +71,7 @@
                                     required
                                 ></v-text-field>
                                 <v-text-field
-                                    outlined
+                                    variant="outlined"
                                     v-model="form.password_confirmation"
                                     :rules="passwordRules"
                                     label="Confirm Password"
@@ -81,6 +82,7 @@
                                     :loading="loading"
                                     color="primary"
                                     dark
+                                    class="mr-2"
                                     @click="Register">
                                     Sign Up
                                 </v-btn>
@@ -100,10 +102,14 @@
 </template>
 
 <script>
-import {client} from "../Plugins/client";
-
+import {client} from "@/Plugins/client";
+import {useAuthStore} from "@/Store/authStore";
 export default {
     name: "Authentication",
+    setup() {
+        const authStore = useAuthStore();
+        return {authStore}
+    },
     data:()=>({
         loading: false,
         is_login:true,
@@ -133,7 +139,7 @@ export default {
                 this.loading = true;
                 client.post('/api/auth/login', this.form).then(response => {
                     console.log(response.data);
-                    this.$store.commit('auth', {
+                    this.authStore.authenticate({
                         token: response.data.token,
                         user: response.data.user
                     });
@@ -143,7 +149,7 @@ export default {
                         message: 'Please Try Again!',
                         icon: 'alert-circle',
                         color:'error'
-                    })
+                    });
                     this.loading = false;
                 }).finally(() => {
                     this.loading = false;

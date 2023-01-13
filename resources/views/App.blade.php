@@ -11,13 +11,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" type="text/css">
     <meta name="title" content="Laravel Jet Fuel">
     <meta name="description" content="Laravel Jet Fuel">
-
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}"/>
-
+    @vite(['resources/js/app.js'])
 </head>
 <body>
 <div id="app"></div>
-<script src="{{ mix('js/app.js') }}"></script>
+
 </body>
 </html>

@@ -1,8 +1,7 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
+import '@mdi/font/css/materialdesignicons.css'
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
 
-Vue.use(Vuetify)
+const Vuetify = createVuetify();
 
-const opts = {}
-
-export default new Vuetify(opts);
+export default Vuetify;

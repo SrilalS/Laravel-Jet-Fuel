@@ -2,19 +2,18 @@
     <v-container>
         <v-row no-gutters justify="start" class="mt-16">
             <v-col cols="auto">
-                <v-card height="130" width="130" class="rounded-lg" color="error">
+                <v-card height="130" width="130" class="rounded-lg" color="red">
                     <v-icon size="128" color="white">mdi-rocket-launch</v-icon>
                 </v-card>
-                <span class="text-h2 font-weight-medium">Laravel Jet Fuel</span>
+                <span class="text-red text-h2 font-weight-medium">Laravel Jet Fuel</span>
                 <br>
                 <span class="text-h5">Template Version 1.2</span>
                 <br>
-                <span>Laravel 9.4 | VueJs 2.7 | Vuetify 2.6</span>
+                <span>Laravel 9 | Vue 3 | Vuetify 3</span>
                 <br>
                 <span>Template Maintainer: Srilal Sachintha</span>
                 <br>
-                <v-btn target="_blank" href="https://github.com/SrilalS/Laravel-Jet-Fuel" outlined>
-                    <v-icon>mdi-github</v-icon>
+                <v-btn color="primary" append-icon="mdi-github" class="mt-2" target="_blank" href="https://github.com/SrilalS/Laravel-Jet-Fuel">
                     Github
                 </v-btn>
 
