@@ -18,7 +18,7 @@ For years, I have been using Laravel and Vue for my university projects and deci
 I have now opened it to everyone to use, and hopefully it will be useful for you as well.
 
 I Have Kept everything to the bare bones, so it is easy to understand and modify. 
-This also means that it is not a full-fledged template, 
+This also means that it is not a full-fledged project, 
 but rather a starting point for your project.
 
 ## Features
