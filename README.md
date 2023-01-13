@@ -30,3 +30,25 @@ build tool for almost every framework that used to use Mix. it also offers
 -   Pinia For State Management
 -   For Routing, VueRouter Pre-Setup
 -   Both Vite and Mix Build Options
+
+
+## Installation
+
+1. Clone the repository
+2. Run `composer install`
+3. Run `npm install`
+4. Configure your `.env` file
+5. Run `php artisan migrate`
+6. Configure your `vite.config.js` file
+7. Run `npm run dev` or `npm run build`
+
+In `vite.config.js` file, the `host` option is set to `http://public.local` by default.
+this is the host for Laragon. If you are using the in-built PHP server, change it to the
+corresponding host of yours.
+
+## Laragon vs In-Built PHP Server
+
+
+I Recommend using Laragon for development as it is a lot faster than the
+inbuilt PHP server. Laragon also comes with a lot of other tools.
+check out [Laragon](https://laragon.org/) for more info.
