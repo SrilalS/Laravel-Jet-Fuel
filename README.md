@@ -14,7 +14,7 @@ hobby projects and assignments and similar scale projects.
 It keeps to the bare bones for functions and best suited for skipping 
 the setup part of Laravel and Vue Integrated projects.
 
-For years, I have been using Laravel and Vue for my university projects and decided to make a template some years ago to make the setup process shorter.
+For years, I have been using Laravel and Vue for my university projects and decided to make a template to make the setup process shorter.
 I have now opened it to everyone to use, and hopefully it will be useful for you as well.
 
 I Have Kept everything to the bare bones, so it is easy to understand and modify. 
